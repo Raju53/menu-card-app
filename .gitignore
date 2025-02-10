@@ -1,0 +1,10 @@
+.DS_Store          # macOS Finder files
+Thumbs.db          # Windows thumbnail cache files
+*.log              # Log files
+node_modules/      # Node.js dependencies (if applicable)
+.idea/             # IntelliJ IDEA project files (if applicable)
+.vscode/           # VS Code project files (if applicable)
+.history           # History files (if applicable)
+config.js         # Configuration files (if you have any and don't want to share API keys, etc.)
+*.swp             # Swap files (from editors like Vim)
+*~                # Backup files (from some editors)

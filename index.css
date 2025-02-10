@@ -1,0 +1,173 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Cursive";
+    font-style: oblique;
+}
+
+.marquee {
+    width: 100%; /* Or a specific width */
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%; /* Start off-screen */
+    animation: marquee 15s linear infinite; /* Adjust duration as needed */
+    color: #ffff00;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); } /* Move text to the left */
+}
+
+nav {
+    background-color: #eee;
+    padding: 1em;
+}
+
+#category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#category-list li {
+    margin: 0.5em 1em;
+    cursor: pointer;
+    padding: 0.5em 1em; /* Add padding to the category buttons */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #fff; /* Set background color */
+    transition: background-color 0.3s ease; /* Add a hover transition */
+}
+
+#category-list li:hover {
+    background-color: #ddd; /* Change background color on hover */
+}
+
+#menu-items {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px;
+}
+
+.item-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+.item-content {
+    display: flex;
+    flex-grow: 1; /* Allow content to grow */
+}
+
+.item-details {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.item-rating {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-weight: bold;
+    text-align: center; /* Center the price */
+    margin-top: auto;
+    padding: 5px;
+}
+
+.veg-nonveg-filter {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.veg-nonveg-filter button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #eee;
+    transition: background-color 0.3s ease;
+}
+
+.veg-nonveg-filter button:hover {
+    background-color: #ddd;
+}
+
+.veg-nonveg-filter button.active-veg { /* Style for active Veg button */
+    background-color: green;
+    color: white;
+}
+
+.veg-nonveg-filter button.active-nonveg { /* Style for active Non-Veg button */
+    background-color: red;
+    color: white;
+}
+
+.veg-nonveg-filter button.active-all { /* Style for active All button */
+  background-color: #ddd;
+  color: #000;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #menu-items {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
