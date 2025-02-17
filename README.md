@@ -9,8 +9,8 @@ This project is a dynamic and responsive web application showcasing the menu for
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing) (Optional)
-- [License](#license) (Optional)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Project Overview
 
